@@ -53,7 +53,7 @@ module USBHub (
   logic [10:0] frame_i;
   logic [63:0] data_i;
 
-  assign serial_in = bus_t'({DP, DM});
+  assign serial_in = {DP, DM};
   assign rst_USB = reset_cntr == RESET_TIMEOUT;
   assign global_rst = ~rst_n | rst_USB;
 
