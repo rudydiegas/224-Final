@@ -285,7 +285,7 @@ module SIE_down (
   /////////////////////
 
   assign sync_o = rcvd_sync;
-  assign PID_o = pid_t'(rcvd_PID[3:0]);
+  assign PID_o = rcvd_PID[3:0];
   assign addr_o = rcvd_token[6:0];
   assign endp_o = rcvd_token[10:7];
   assign frame_o = rcvd_token;
@@ -298,8 +298,8 @@ module SIE_down (
       rcvd_sync <= {rcvd_sync[6:0], nrz_data};
   end
 
-  assign PID_val = pid_t'(rcvd_PID[3:0]);
-  assign PID_val_trns = pid_t'(rcvd_PID[4:1]);
+  assign PID_val = rcvd_PID[3:0];
+  assign PID_val_trns = rcvd_PID[4:1];
   assign PID_val_n = rcvd_PID[7:4];
 
   always_ff @(posedge clk) begin
