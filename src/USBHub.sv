@@ -1,6 +1,6 @@
 `default_nettype none
 
-// `include "USB.svh"
+`include "USB.svh"
 
 module USBHub (
   input  wire         clk,
