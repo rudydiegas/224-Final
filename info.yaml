@@ -1,9 +1,20 @@
---- 
+---
 project:
   source_files:
     - toplevel_chip.v
     - chip.sv
-    - decoder.v
+    - USB.svh
+    - USBHub.sv
+    - USBHubController.sv
+    - USBHubFSM.sv
+    - USBHubRepeater.sv
+    - data_recovery.sv
+    - synchronizer.sv
+    - SIE/downstream/BitStuff_down.sv
+    - SIE/downstream/NRZI_down.sv
+    - SIE/downstream/CRC5_down.sv
+    - SIE/downstream/CRC16_down.sv
+    - SIE/downstream/SIE_down.sv
   top_module:  "toplevel_chip"
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -12,7 +23,7 @@ project:
 # Here is an example: https://github.com/mattvenn/tinytapeout_m_segments/blob/main/info.yaml
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
-documentation: 
+documentation:
   author:       "PLACEHOLDER"      # Your name
   discord:      ""      # Your discord handle
   title:        "PLACEHOLDER"      # Project title
